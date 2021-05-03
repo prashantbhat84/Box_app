@@ -1,2 +1,4 @@
 .git
 node_modules
+jsdoc.json
+utils/swagger.js

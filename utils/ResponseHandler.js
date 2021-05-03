@@ -9,6 +9,8 @@ class ResponseHandler {
             result: "",
             errors: ""
         }
+        this.badFormat = this.badFormat.bind(this);
+        this.makeResult = this.makeResult.bind(this);
     }
 
     badFormat(errors) {
@@ -68,4 +70,4 @@ class ResponseHandler {
     };
 }
 
-module.exports = ResponseHandler;
+export default ResponseHandler

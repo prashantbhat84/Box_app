@@ -1,12 +1,16 @@
 'use strict';
+import ResponseHandler from '../utils/ResponseHandler.js'
+const response = new ResponseHandler();
+console.log(response)
 class Route {
     constructor() {
         this.test = this.test.bind(this);
 
     }
     async test(req, res, next) {
-
-        return res.status(200).json({ status: 200, Message: "Success", result: "done" })
+        const response1 = response.makeResult(200, "Done");
+        console.log({ response1 })
+        return res.status(200).json(response1)
     }
 
 
